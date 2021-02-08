@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto Condensed', sans-serif;
+  background-image: linear-gradient(120deg, #8573a7, #154c8b);
+  background-repeat: no-repeat;
+  background-position: center;
+  color: ghostwhite;
+  min-height: 100vh;
+}
+
+.header {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+header,
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 20vh;
+}
+
+form input,
+form button {
+  padding: 0.5rem;
+  font-size: 2rem;
+  border: none;
+  background: ghostwhite;
+}
+
+.todo-button {
+  color: #8573a7;
+  background-color: ghostwhite;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.todo-button:hover {
+  color: ghostwhite;
+  background-color: #8573a7;
+}
+
+select {
+  padding: 1rem;
+  margin-left: 20px;
+  color: #181127;
+}
+
+.select {
+  position: relative;
+  overflow: hidden;
+
+}
+
+.select::after {
+  content: "\25BC";
+  position: absolute;
+  background: #8573a7;
+  top: 0;
+  right: 0;
+  padding: 1rem;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.select:hover::after {
+  background: #fff;
+  color:#8573a7;
+}
+
+.todo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.todo-list {
+  min-width: 30%;
+  list-style: none;
+}
+
+.todo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: ghostwhite;
+  margin: 0.5rem;
+  color: #333;
+  font-size: 1.5rem;
+  transition: all 0.4s ease;
+}
+
+.todo-item {
+  flex: 1;
+  padding: 0rem 0.5rem;
+}
+
+.complete-btn,
+.trash-btn {
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 1rem;
+  font-size: 1rem;
+}
+
+
+.complete-btn {
+  background: rgb(8, 243, 0);
+}
+
+.trash-btn {
+  background: rgb(189, 73, 173);
+}
+
+/* Makes sure that the little icon in the middle of the button is not what needs to be clicked to make the button function... */
+  .fa-trash, 
+  .fa-check {
+    pointer-events: none;
+  }
+  
+  .fall {
+    transform: translateY(8rem) rotateZ(20deg);
+    opacity: 0;
+  }
+
+  .completed {
+    opacity: 0.3;
+  }
